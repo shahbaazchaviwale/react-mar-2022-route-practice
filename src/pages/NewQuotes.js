@@ -1,7 +1,15 @@
+import {Fragment} from 'react';
+import QuoteForm from '../components/quotes/QuoteForm';
+
+
 const NewQuotes = () => {
-    return <div>
-         Add new Quotes
-    </div>
+
+const FormHandler = (quoteData) => {
+    console.log('quoteData >>', quoteData);
+}
+return <Fragment>
+        <QuoteForm onAddQuote={FormHandler}/>
+    </Fragment>
 }
 
 export default NewQuotes;
