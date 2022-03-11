@@ -1,6 +1,6 @@
 const AllQuotes = () => {
     return <div>
-        
+        All Quotes
     </div>
 }
 

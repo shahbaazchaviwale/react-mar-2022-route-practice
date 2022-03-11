@@ -1,6 +1,6 @@
 const QuoteDetail = () => {
     return <div>
-        
+        Quote Detail
     </div>
 }
 
