@@ -1,6 +1,6 @@
 const NewQuotes = () => {
     return <div>
-         All New Quotes
+         Add new Quotes
     </div>
 }
 
