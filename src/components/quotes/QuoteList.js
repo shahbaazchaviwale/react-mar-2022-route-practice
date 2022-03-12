@@ -19,6 +19,7 @@ const QuoteList = (props) => {
 
   const history = useHistory();
   const location = useLocation(); //get params of URL
+  console.log('location>>', location)
   // new URLSearchParams => its  javascript constructor
   //The URLSearchParams interface defines utility methods to work with the query string of a URL.
   const queryParam = new URLSearchParams(location.search)
@@ -30,8 +31,17 @@ const QuoteList = (props) => {
   const sortedQuotes = sortQuotes(props.quotes, isSortingAscending);
 
   const changeSortingHandler = () => {
-    // called AllQuotes component
-    history.push('/quotes?sort='+ (isSortingAscending? 'desc': 'asc'))
+    /**
+     * /quotes?sort='+ (isSortingAscending? 'desc': 'asc')
+     * called AllQuotes component
+     */
+    // history.push(`${location.pathname}?sort=${(isSortingAscending? 'desc': 'asc')}`)
+    // below code can be written  for complex way
+    history.push({
+      pathname: location.pathname,
+      search: `?sort=${(isSortingAscending? 'desc': 'asc')}`
+    });
+    
   }
 
   return (
